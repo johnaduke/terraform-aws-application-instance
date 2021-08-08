@@ -16,7 +16,7 @@ variable "environment_tag" {
 }
 variable "instance_name" {
   description = "EC2 Instance Name"
-  default = "Terraform Instance-${count.index + 1}"
+  default = "Terraform Instance"
 }
 variable "instance_count" {
   description = "Number of Application Instances"
