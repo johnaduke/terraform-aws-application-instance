@@ -20,5 +20,5 @@ variable "instance_name" {
 }
 variable "instance_count" {
   description = "Number of Application Instances"
-  default "1"
+  default = "1"
 }
