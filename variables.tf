@@ -22,3 +22,7 @@ variable "instance_count" {
   description = "Number of Application Instances"
   default = "1"
 }
+variable "public_subnet_id" {
+  description = "The public Subnet for the Instanxe to launch in"
+  default = "module.vpc.public_subnets.id"
+}
