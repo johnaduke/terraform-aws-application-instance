@@ -34,7 +34,7 @@ ingress {
 }
 
 resource "aws_key_pair" "ec2key" {
-  key_name = "publicKey"
+  key_name = "publicKey-${var.environment_tag}"
   public_key = var.public_ssh_key
 }
 
