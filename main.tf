@@ -4,7 +4,7 @@ terraform {
 
 resource "aws_security_group" "sg_22" {
   name = "sg_22"
-  vpc_id = var.vpc_id
+  vpc_id = "${var.vpc_id}"
 
   # SSH access from the VPC
   ingress {
@@ -35,7 +35,7 @@ resource "aws_instance" "testInstance" {
 #  count         = var.instance_count  
   ami           = var.instance_ami
   instance_type = var.instance_type
-  subnet_id     = var.public_subnet_id
+  subnet_id     = "${var.public_subnet_id}"
   vpc_security_group_ids = [aws_security_group.sg_22.id]
   key_name = aws_key_pair.ec2key.key_name
 
