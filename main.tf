@@ -32,7 +32,7 @@ resource "aws_key_pair" "ec2key" {
 }
 
 resource "aws_instance" "testInstance" {
-  count         = var.instance_count  
+#  count         = var.instance_count  
   ami           = var.instance_ami
   instance_type = var.instance_type
   subnet_id     = var.public_subnet_id
